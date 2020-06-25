@@ -25,3 +25,9 @@
 此外，插件灵感与素材来自VSCode插件作者@SaekiRaku(https://github.com/SaekiRaku/vscode-rainbow-fart)
 
 该项目为 VisualStudio C#语言版本的实现
+
+<br /> <br />
+
+<img src="https://github.com/gameguo/RainbowFart_VisualStudio/blob/master/document/1.png?raw=true" alt="1" width="1000" />
+<img src="https://github.com/gameguo/RainbowFart_VisualStudio/blob/master/document/2.png?raw=true" alt="1" width="1000" />
+<img src="https://github.com/gameguo/RainbowFart_VisualStudio/blob/master/document/3.png?raw=true" alt="1" width="1000" />
