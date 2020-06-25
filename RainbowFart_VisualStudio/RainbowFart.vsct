@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!--This is the file that defines the IDs for all the commands exposed by VisualStudio. -->
+  <Extern href="stdidcmd.h"/>
+
+  <!--This header contains the command ids for the menus provided by the shell. -->
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidMainCommandPackage">
+
+    <Menus>
+      <Menu guid="guidMainCommandPackageCmdSet" id="TopLevelMenu" priority="0x700" type="Menu">
+        <Parent guid="guidSHLMainMenu"
+                id="IDG_VS_MM_TOOLSADDINS" />
+        <Strings>
+          <ButtonText>彩虹屁</ButtonText>
+          <CommandName>彩虹屁</CommandName>
+        </Strings>
+      </Menu>
+    </Menus>
+    
+    <Groups>
+      <Group guid="guidMainCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidMainCommandPackageCmdSet" id="TopLevelMenu"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidMainCommandPackageCmdSet" id="EnableRainbowFart" priority="0x0100" type="Button">
+        <Parent guid="guidMainCommandPackageCmdSet" id="MyMenuGroup" />
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>设置</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidMainCommandPackageCmdSet" id="TestAudio" priority="0x0101" type="Button">
+        <Parent guid="guidMainCommandPackageCmdSet" id="MyMenuGroup" />
+        <Strings>
+          <ButtonText>测试声音播放</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidMainCommandPackageCmdSet" id="ResetState" priority="0x0102" type="Button">
+        <Parent guid="guidMainCommandPackageCmdSet" id="MyMenuGroup" />
+        <Strings>
+          <ButtonText>刷新</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\MainCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough"/>
+    </Bitmaps>
+  </Commands>
+
+  <Symbols>
+    <!-- This is the package guid. -->
+    <GuidSymbol name="guidMainCommandPackage" value="{808b4f12-291b-462d-819d-e9f81f4f62c5}" />
+
+    <!-- This is the guid used to group the menu commands together -->
+    <GuidSymbol name="guidMainCommandPackageCmdSet" value="{199d68e1-de36-4a7f-beb9-cacff086f594}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="EnableRainbowFart" value="0x0100" />
+      <IDSymbol name="TestAudio" value="0x0101" />
+      <IDSymbol name="ResetState" value="0x0102" />
+      <IDSymbol name="TopLevelMenu" value="0x1021"/>
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{790f939c-ddc2-4e83-8ea7-4a25892f5e1d}" >
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
