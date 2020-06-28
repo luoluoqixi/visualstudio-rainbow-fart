@@ -12,12 +12,13 @@
 
 1. 双击安装扩展
 
-2. VS2017：点击菜单项 "彩虹屁" >> "测试声音播放"
+2. VS2017：点击菜单项 "彩虹屁" >> "测试声音播放"<br />
    VS2019：点击菜单项 "扩展" >> "彩虹屁" >> "测试声音播放"
 
-3. 打开一个代码文件，尝试输入import、using、if等关键字（关键字可通过 音频资源路径/contributes.json中自行添加，目前已添加部分C#）
+3. 打开一个代码文件，尝试输入import、using、if等关键字<br />
+（关键字可通过 音频资源路径/contributes.json中自行添加，目前已添加部分C#）
 
-4. VS2017：可在菜单项 >> "彩虹屁" >> "设置" 中指定开关与音频资源路径
+4. VS2017：可在菜单项 >> "彩虹屁" >> "设置" 中指定开关与音频资源路径<br />
    VS2019：可在菜单项 >> "扩展" >> "彩虹屁" >> "设置" 中指定开关与音频资源路径
 
 ## License
@@ -28,7 +29,7 @@
 该项目为 VisualStudio C#语言版本的实现
 
 <br /> <br />
-<img src="https://github.com/gameguo/visualstudio-rainbow-fart/blob/master/document/vs2019.png?raw=true" alt="1" width="500" />
+<img src="https://github.com/gameguo/visualstudio-rainbow-fart/blob/master/document/vs2019.png?raw=true" alt="1" width="1000" />
 <img src="https://github.com/gameguo/visualstudio-rainbow-fart/blob/master/document/1.png?raw=true" alt="1" width="1000" />
 <img src="https://github.com/gameguo/visualstudio-rainbow-fart/blob/master/document/2.png?raw=true" alt="1" width="1000" />
 <img src="https://github.com/gameguo/visualstudio-rainbow-fart/blob/master/document/3.png?raw=true" alt="1" width="1000" />
