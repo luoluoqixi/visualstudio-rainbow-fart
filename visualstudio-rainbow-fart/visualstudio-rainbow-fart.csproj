@@ -260,7 +260,10 @@
     </VSCTCompile>
     <Content Include="LitJson\LitJson-0.16.0\LitJSON.csproj" />
     <Content Include="LitJson\LitJson-0.16.0\litjson.png" />
-    <Content Include="Resources\logo.png" />
+    <Content Include="Resources\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Resources\MainCommand.png" />
     <Content Include="Resources\MainCommandPackage.ico" />
   </ItemGroup>

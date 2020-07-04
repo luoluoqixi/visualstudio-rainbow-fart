@@ -2,10 +2,12 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
         <Identity Id="0ec097c2-3d82-4406-a22b-ae6b3ce546d1" Version="1.0" Language="zh-Hans" Publisher="gameguo" />
-        <DisplayName>RainbowFart</DisplayName>
-        <Description xml:space="preserve">RainbowFart VisualStudio.</Description>
+        <DisplayName>visualstudio-rainbow-fart</DisplayName>
+        <Description xml:space="preserve">彩虹屁插件 - VisualStudio  - v1.0
+visualstudio-rainbow-fart . </Description>
+        <Icon>Resources\logo.png</Icon>
     </Metadata>
-  <Installation InstalledByMsi="false">
+    <Installation InstalledByMsi="false">
         <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[14.0, 17.0)" />
     </Installation>
     <Dependencies>
@@ -17,6 +19,6 @@
     </Prerequisites>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-      <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
-  </Assets>
+        <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
+    </Assets>
 </PackageManifest>
