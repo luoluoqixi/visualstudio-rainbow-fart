@@ -7,10 +7,13 @@
 
 ## 快速上手
 
-从release下载VSIX安装扩展即可，未发布VisualStudio扩展商店
-(测试环境VS2017、VS2019，未测其他版本)
 
-1. 双击安装扩展
+(测试环境VS2017、VS2019，未测其他版本， 应该可以支持VS2015 - VS2019所有版本)
+
+1. 安装扩展<br />
+  方法1：从release下载VSIX直接安装<br />
+  方法2：[已发布VisualStudio扩展商店](https://marketplace.visualstudio.com/items?itemName=gameguo.rainbow-fart)<br />
+  方法3：VisualStudio 工具 >> 扩展与更新 >> 联机 >> 搜索：rainbow-fart  或  彩虹屁  (刚刚发布似乎还搜不到)
 
 2. VS2017：点击菜单项 "彩虹屁" >> "测试声音播放"<br />
    VS2019：点击菜单项 "扩展" >> "彩虹屁" >> "测试声音播放"
