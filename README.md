@@ -32,7 +32,7 @@
 该项目为 VisualStudio C#语言版本的实现
 
 <br /> <br />
-<img src="https://github.com/gameguo/visualstudio-rainbow-fart/blob/master/document/vs2019.png?raw=true" alt="1" width="1000" />
-<img src="https://github.com/gameguo/visualstudio-rainbow-fart/blob/master/document/1.png?raw=true" alt="1" width="1000" />
-<img src="https://github.com/gameguo/visualstudio-rainbow-fart/blob/master/document/2.png?raw=true" alt="1" width="1000" />
-<img src="https://github.com/gameguo/visualstudio-rainbow-fart/blob/master/document/3.png?raw=true" alt="1" width="1000" />
+<img src="https://github.com/gameguo/visualstudio-rainbow-fart/blob/main/document/vs2019.png?raw=true" alt="1" width="1000" />
+<img src="https://github.com/gameguo/visualstudio-rainbow-fart/blob/main/document/1.png?raw=true" alt="1" width="1000" />
+<img src="https://github.com/gameguo/visualstudio-rainbow-fart/blob/main/document/2.png?raw=true" alt="1" width="1000" />
+<img src="https://github.com/gameguo/visualstudio-rainbow-fart/blob/main/document/3.png?raw=true" alt="1" width="1000" />
