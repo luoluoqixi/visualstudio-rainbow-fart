@@ -8,12 +8,15 @@
 ## 快速上手
 
 
-(测试环境VS2017、VS2019，未测其他版本， 应该可以支持VS2015 - VS2019所有版本)
+(测试环境VS2017、VS2019、VS2022，未测其他版本， 应该可以支持VS2015 - VS2019所有版本)
 
 1. 安装扩展<br />
-  方法1：从release下载VSIX直接安装<br />
+  方法1：[从release下载VSIX直接安装](https://github.com/gameguo/visualstudio-rainbow-fart/releases/tag/v2.0)<br />
+  VS2022 请下载 visualstudio-rainbow-fart_2022.vsix<br />
+  VS2019 及更老版本请下载 visualstudio-rainbow-fart_2019_or_old.vsix<br /><br />
+  **以下链接只有2019及其以下版本：**<br />
   方法2：[已发布VisualStudio扩展商店](https://marketplace.visualstudio.com/items?itemName=gameguo.rainbow-fart)<br />
-  方法3：VisualStudio 工具 >> 扩展与更新 >> 联机 >> 搜索：rainbow-fart  或  彩虹屁  (刚刚发布似乎还搜不到)
+  ~~方法3：VisualStudio 工具 >> 扩展与更新 >> 联机 >> 搜索：rainbow-fart  或  彩虹屁  (刚刚发布似乎还搜不到)~~
 
 2. VS2017：点击菜单项 "彩虹屁" >> "测试声音播放"<br />
    VS2019：点击菜单项 "扩展" >> "彩虹屁" >> "测试声音播放"
@@ -23,6 +26,16 @@
 
 4. VS2017：可在菜单项 >> "彩虹屁" >> "设置" 中指定开关与音频资源路径<br />
    VS2019：可在菜单项 >> "扩展" >> "彩虹屁" >> "设置" 中指定开关与音频资源路径
+   
+## 关于编译
+
+#### 项目最后使用VS2019与VS2022编译通过, 2022版本扩展与2019及其以下版本扩展无法使用同一个vsix发布。<br /> <br />
+发布时：<br />
+默认使用vsixmanifest为发布VS2022版本 [source.extension.vsixmanifest](https://github.com/gameguo/visualstudio-rainbow-fart/blob/main/visualstudio-rainbow-fart/source.extension.vsixmanifest) <br />
+如需发布2019及其以下版本, 请把 [source.extension_2019_or_old.vsixmanifest](https://github.com/gameguo/visualstudio-rainbow-fart/blob/main/visualstudio-rainbow-fart/source.extension_2019_or_old.vsixmanifest) 重命名为source.extension.vsixmanifest进行发布... <br />
+ <br />
+<br />
+另外，此项目代码偏早，继续维护可能需要重构... （其实没有时间！） <br /> <br />
 
 ## License
 基于 MIT 开源，包括所有设计资源及音频资源。由于仓库中的音频资源大部分由真人录音，并且根据 MIT 被授权人义务。在此明确：尤其的对于仓库中多媒体资源，您有（单独）标明资源作者（[@JustKowalski](https://github.com/JustKowalski) 提供。）、链接、许可的义务。
