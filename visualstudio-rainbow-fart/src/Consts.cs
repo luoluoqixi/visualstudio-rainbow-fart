@@ -19,8 +19,11 @@ namespace RainbowFart_VisualStudio.src
 
         public const string OptionsFolderText = "Root Path";
         public const string OptionsFolderDescription = "Root Path";
+        public const string TimeOutSecondsText = "TimeOut Seconds";
 
         public const string AudioContributesJson = "contributes.json";
         public const string AudioDefaultFolder = "default";
+
+        public const int InputTextMaxLength = 100;
     }
 }
