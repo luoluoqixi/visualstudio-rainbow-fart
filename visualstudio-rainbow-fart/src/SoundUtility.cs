@@ -1,20 +1,34 @@
-﻿using System;
+﻿using NAudio.Wave;
+using System;
 using System.IO;
 using System.Reflection;
-using System.Windows.Media;
+using System.Threading.Tasks;
 
 namespace RainbowFart_VisualStudio.src
 {
-    public class SoundUtility
+    public class SoundUtility : IDisposable
     {
         private static SoundUtility _instance;
-        private static MediaPlayer _player = new MediaPlayer();
+        private WaveOutEvent outputDevice = new WaveOutEvent();
+        private static AudioFileReader audioFile;
         public static SoundUtility Instance => _instance ?? (_instance = new SoundUtility());
-        private SoundUtility() {  /* Init(); */ }
-        /// <summary> 初始化 </summary>
+        private SoundUtility()
+        {
+            outputDevice.PlaybackStopped += OutputDevice_PlaybackStopped;
+        }
+
+        private void OutputDevice_PlaybackStopped(object sender, StoppedEventArgs e)
+        {
+            audioFile?.Dispose();
+            audioFile = null;
+        }
+
+        /// <summary> 
+        /// 初始化 
+        /// </summary>
         public void Init()
         {
-            //_player.MediaEnded += (s, e) => _player.Close();
+
         }
         public void Play(string audioName)
         {
@@ -23,23 +37,63 @@ namespace RainbowFart_VisualStudio.src
         }
         public void PlayAbsolute(string path)
         {
-            _player.Stop();
+            if (outputDevice.PlaybackState == PlaybackState.Playing) return;
+            outputDevice.Stop();
+     
             if (RainbowFart.Instance.setting == null) return;
             if (RainbowFart.Instance.setting.EnableAudiopoint)
             {
                 if (!File.Exists(path)) return;
-                _player.Open(new Uri(path, UriKind.Absolute));
-                _player.Play();
+                Task t = new Task(() =>
+                {
+                    audioFile = new AudioFileReader(path);
+                    outputDevice.Init(audioFile);
+                    outputDevice.Volume = 1;
+                    outputDevice.Play();
+
+                });
+                t.Start();
             }
         }
         public void Stop()
         {
-            _player.Stop();
+            outputDevice.Stop();
         }
         public string GetAudioPath(string name)
         {
             return Path.Combine(GetAudioFolderPath(), name);
         }
         public virtual string GetAudioFolderPath() { return Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Audio"); }
+
+        #region "IDisposable及析构实现"
+        private bool isDisposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (isDisposed) return;
+
+            //清理托管资源
+            if (disposing)
+            {
+                outputDevice?.Dispose();
+                audioFile.Dispose();
+            }
+
+            //清理非托管资源
+
+            //告诉自己已经被释放
+            isDisposed = true;
+        }
+        ~SoundUtility()
+        {
+            // Finalizer calls Dispose(false)
+            Dispose(false);
+        }
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+        #endregion
+
     }
 }

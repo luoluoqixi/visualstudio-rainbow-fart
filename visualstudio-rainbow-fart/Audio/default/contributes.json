@@ -42,7 +42,7 @@
             ]
         },
         {
-            "keywords": ["catch", "except", "err!=nil", "!=null"],
+            "keywords": ["catch", "except", "try", "err!=nil", "!=null"],
             "voices": [
                 "catch_01.mp3",
                 "catch_02.mp3",
