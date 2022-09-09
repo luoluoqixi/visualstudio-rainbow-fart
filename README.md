@@ -15,7 +15,7 @@
   VS2022 请下载 visualstudio-rainbow-fart_2022.vsix<br />
   VS2019 及更老版本请下载 visualstudio-rainbow-fart.vsix<br /><br />
   **以下链接只有2019及其以下版本：**<br />
-  方法2：[已发布VisualStudio扩展商店](https://marketplace.visualstudio.com/items?itemName=gameguo.rainbow-fart)<br />
+  ~~方法2：[已发布VisualStudio扩展商店](https://marketplace.visualstudio.com/items?itemName=gameguo.rainbow-fart)~~ 账号丢失已无法更新<br />
   ~~方法3：VisualStudio 工具 >> 扩展与更新 >> 联机 >> 搜索：rainbow-fart  或  彩虹屁  (刚刚发布似乎还搜不到)~~
 
 2. VS2017：点击菜单项 "彩虹屁" >> "测试声音播放"<br />
