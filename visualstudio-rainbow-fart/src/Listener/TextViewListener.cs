@@ -32,7 +32,6 @@ namespace RainbowFart_VisualStudio
         private readonly Random random = new Random();
         static DateTime LastChangedTime = DateTime.MinValue;
         TimeSpan Timeout = TimeSpan.FromSeconds(10);
-        TimeSpan Delay = TimeSpan.FromMilliseconds(500);
         private void TextBuffer_Changed(object sender, TextContentChangedEventArgs e)
         {
             if (e.Changes?.Count > 0)
@@ -59,9 +58,9 @@ namespace RainbowFart_VisualStudio
                         if (string.IsNullOrWhiteSpace(item.NewText) == false) // Not WhiteSpace
                             sb.Append(item.NewText.ToLower());
 
-                        if (sb.Length > src.Consts.InputTextMaxLength)
+                        if (sb.Length > Consts.InputTextMaxLength)
                         {
-                            sb.Remove(0, src.Consts.InputTextMaxLength);
+                            sb.Remove(0, Consts.InputTextMaxLength);
                         }
                         if (DateTime.Now - LastChangedTime > Timeout)
                         {
@@ -91,7 +90,7 @@ namespace RainbowFart_VisualStudio
         {
             LastChangedTime = DateTime.Now;
             if (RainbowFart.Instance.setting == null || !RainbowFart.Instance.setting.EnableAudiopoint) return false;
-            var data = RainbowFart.Instance.data.Contributes;
+            var data = RainbowFart.Instance.appData.Contributes;
             if (data == null || data.contributes == null) return false;
 
             foreach (var contribute in data.contributes)
@@ -105,7 +104,7 @@ namespace RainbowFart_VisualStudio
                         continue;
 
                     var voice = contribute.voices[random.Next(contribute.voices.Length)];
-                    src.SoundUtility.Instance.PlayAbsolute(Path.Combine(RainbowFart.Instance.setting.RootPath, voice));
+                    SoundUtility.Instance.Play(Path.Combine(RainbowFart.Instance.setting.AudioPath, voice));
 #if OpenDebug
                     System.Diagnostics.Debug.WriteLine($"inputHistory:{inputHistory} Match=>{keyword}");
 #endif

@@ -4,7 +4,6 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
-using RainbowFart_VisualStudio.src;
 using Task = System.Threading.Tasks.Task;
 
 namespace RainbowFart_VisualStudio

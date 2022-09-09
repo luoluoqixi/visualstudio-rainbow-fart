@@ -24,25 +24,44 @@
         <Parent guid="guidMainCommandPackageCmdSet" id="TopLevelMenu"/>
       </Group>
     </Groups>
-
+    
     <Buttons>
-      <Button guid="guidMainCommandPackageCmdSet" id="EnableRainbowFart" priority="0x0100" type="Button">
+      <Button guid="guidMainCommandPackageCmdSet" id="RainbowFartToggle" priority="0x0100" type="Button">
+        <Parent guid="guidMainCommandPackageCmdSet" id="MyMenuGroup" />
+        <CommandFlag>TextChanges</CommandFlag>
+        <Strings>
+          <ButtonText>快速开关</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidMainCommandPackageCmdSet" id="OpenSetting" priority="0x0101" type="Button">
         <Parent guid="guidMainCommandPackageCmdSet" id="MyMenuGroup" />
         <CommandFlag>TextChanges</CommandFlag>
         <Strings>
           <ButtonText>设置</ButtonText>
         </Strings>
       </Button>
-      <Button guid="guidMainCommandPackageCmdSet" id="TestAudio" priority="0x0101" type="Button">
+      <Button guid="guidMainCommandPackageCmdSet" id="TestAudio" priority="0x0102" type="Button">
         <Parent guid="guidMainCommandPackageCmdSet" id="MyMenuGroup" />
         <Strings>
           <ButtonText>测试声音播放</ButtonText>
         </Strings>
       </Button>
-      <Button guid="guidMainCommandPackageCmdSet" id="ResetState" priority="0x0102" type="Button">
+      <Button guid="guidMainCommandPackageCmdSet" id="OpenAudioDir" priority="0x0103" type="Button">
         <Parent guid="guidMainCommandPackageCmdSet" id="MyMenuGroup" />
         <Strings>
-          <ButtonText>刷新</ButtonText>
+          <ButtonText>打开音频目录</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidMainCommandPackageCmdSet" id="ResetState" priority="0x0104" type="Button">
+        <Parent guid="guidMainCommandPackageCmdSet" id="MyMenuGroup" />
+        <Strings>
+          <ButtonText>刷新数据</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidMainCommandPackageCmdSet" id="About" priority="0x0105" type="Button">
+        <Parent guid="guidMainCommandPackageCmdSet" id="MyMenuGroup" />
+        <Strings>
+          <ButtonText>关于</ButtonText>
         </Strings>
       </Button>
     </Buttons>
@@ -60,9 +79,12 @@
     <!-- This is the guid used to group the menu commands together -->
     <GuidSymbol name="guidMainCommandPackageCmdSet" value="{199d68e1-de36-4a7f-beb9-cacff086f594}">
       <IDSymbol name="MyMenuGroup" value="0x1020" />
-      <IDSymbol name="EnableRainbowFart" value="0x0100" />
-      <IDSymbol name="TestAudio" value="0x0101" />
-      <IDSymbol name="ResetState" value="0x0102" />
+      <IDSymbol name="RainbowFartToggle" value="0x0100" />
+      <IDSymbol name="OpenSetting" value="0x0101" />
+      <IDSymbol name="TestAudio" value="0x0102" />
+      <IDSymbol name="OpenAudioDir" value="0x0103" />
+      <IDSymbol name="ResetState" value="0x0104" />
+      <IDSymbol name="About" value="0x0105" />
       <IDSymbol name="TopLevelMenu" value="0x1021"/>
     </GuidSymbol>
 

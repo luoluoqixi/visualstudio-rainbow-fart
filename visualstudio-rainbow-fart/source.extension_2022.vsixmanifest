@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="0ec097c2-3d82-4406-a22b-ae6b3ce546d1" Version="2.0" Language="zh-Hans" Publisher="gameguo" />
+        <Identity Id="0ec097c2-3d82-4406-a22b-ae6b3ce546d1" Version="2.1" Language="zh-Hans" Publisher="gameguo" />
         <DisplayName>visualstudio-rainbow-fart</DisplayName>
-        <Description xml:space="preserve">visualstudio-rainbow-fart v2.0 .</Description>
+        <Description xml:space="preserve">visualstudio-rainbow-fart v2.1 .</Description>
         <Icon>Resources\logo.png</Icon>
     </Metadata>
     <Installation InstalledByMsi="false">
-        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[14.0,)">
+        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[14.0,18.0)">
+            <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
-        <InstallationTarget Version="[14.0,)" Id="Microsoft.VisualStudio.Community">
+        <InstallationTarget Version="[14.0,18.0)" Id="Microsoft.VisualStudio.Community">
+            <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
-        <InstallationTarget Version="[14.0,)" Id="Microsoft.VisualStudio.Enterprise">
+        <InstallationTarget Version="[14.0,18.0)" Id="Microsoft.VisualStudio.Enterprise">
+            <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
     </Installation>
     <Dependencies>

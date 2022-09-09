@@ -1,15 +1,18 @@
 ﻿using Microsoft.VisualStudio.Shell;
 using System;
 using System.ComponentModel;
+using System.IO;
+using System.Reflection;
 
-namespace RainbowFart_VisualStudio.src
+namespace RainbowFart_VisualStudio
 {
     public class Setting : DialogPage
     {
         public Setting()
         {
-            EnableAudiopoint = true;
-            RootPath = System.IO.Path.Combine(SoundUtility.Instance.GetAudioFolderPath(), Consts.AudioDefaultFolder);
+            enableAudiopoint = true;
+            rootPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            audioPath = Path.Combine(rootPath, "Audio/default");
         }
         private bool enableAudiopoint;
         [Category(Consts.OptionSubmenu)]
@@ -54,20 +57,26 @@ namespace RainbowFart_VisualStudio.src
                 _TimeOutSeconds = LimitCC(value, 5, 60);
             }
         }
-
-        private string rootPath;
+        private string audioPath;
         [Category(Consts.OptionSubmenu)]
         [DisplayName(Consts.OptionsFolderText)]
-        [Description(Consts.OptionsFolderDescription)]
+        public string AudioPath
+        {
+            get
+            {
+                return audioPath;
+            }
+            set
+            {
+                audioPath = value;
+            }
+        }
+        private string rootPath;
         public string RootPath
         {
             get
             {
                 return rootPath;
-            }
-            set
-            {
-                rootPath = value;
             }
         }
     }

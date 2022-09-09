@@ -1,10 +1,9 @@
 ﻿using NAudio.Wave;
 using System;
 using System.IO;
-using System.Reflection;
 using System.Threading.Tasks;
 
-namespace RainbowFart_VisualStudio.src
+namespace RainbowFart_VisualStudio
 {
     public class SoundUtility : IDisposable
     {
@@ -22,20 +21,7 @@ namespace RainbowFart_VisualStudio.src
             audioFile?.Dispose();
             audioFile = null;
         }
-
-        /// <summary> 
-        /// 初始化 
-        /// </summary>
-        public void Init()
-        {
-
-        }
-        public void Play(string audioName)
-        {
-            var path = GetAudioPath(audioName);
-            PlayAbsolute(path);
-        }
-        public void PlayAbsolute(string path)
+        public void Play(string path)
         {
             if (outputDevice.PlaybackState == PlaybackState.Playing) return;
             outputDevice.Stop();
@@ -59,11 +45,6 @@ namespace RainbowFart_VisualStudio.src
         {
             outputDevice.Stop();
         }
-        public string GetAudioPath(string name)
-        {
-            return Path.Combine(GetAudioFolderPath(), name);
-        }
-        public virtual string GetAudioFolderPath() { return Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Audio"); }
 
         #region "IDisposable及析构实现"
         private bool isDisposed;
